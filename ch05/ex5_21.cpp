@@ -26,7 +26,10 @@ int main()
 
     while (cin >> curr) {
         if (!isupper(curr[0]))
+        {
+            prev = curr;           //The bug example of the original program is "A a A".
             continue;
+        }
         if (prev == curr) {
             cout << curr << " occurs twice in succession." << endl;
             no_twice = true;
